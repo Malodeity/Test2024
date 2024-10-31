@@ -18,6 +18,8 @@ This setup is built to handle data with care and prevent errors. Each part of th
 Key improvements include using pandas for quick data handling, grouping database updates to minimize processing time, and protecting data accuracy with transaction control and rollback options. Some compromises were made, like using synchronous processing instead of asynchronous for simplicity, and holding all data in memory rather than streaming it. While this may not work well for extremely large datasets, it balances effectiveness, stability, and ease of development. The use of print statements and error logs helps with tracking issues and keeping the system running smoothly..
 
 
+## Theory Answers
+
 1. To make this solution work with 10 or even 100 times more data, we would need to improve its efficiency and reduce wait times. One way to do this is by using parallel processing tools like multiprocessing which would let us handle different parts of the data at the same time, making the process faster. Another helpful change would be to use asynchronous processing, which allows tasks that don’t depend on each other to run at the same time, reducing waiting time. Switching to stream processing with tools like Kafka or Spark would also help, as it lets us handle data in smaller, real time chunks rather than all at once in memory. Also using a distributed database, like a NoSQL or cloud database, would make it easier to store and access large amounts of data quickly.
 
 
