@@ -145,12 +145,13 @@ def display_data(df):
 
 def get_db_connection():
     return psycopg2.connect(
-        database="test24",
-        user="malo",
-        password="Unlimitedphos@1",
-        host="localhost",
-        port="5433"
+        database=os.getenv('DB_NAME'),
+        user=os.getenv('DB_USER'),
+        password=os.getenv('DB_PASSWORD'),
+        host=os.getenv('DB_HOST'),
+        port=os.getenv('DB_PORT')
     )
+
 
 def save_to_database(enriched_df):
     conn = None
