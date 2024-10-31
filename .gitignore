@@ -1,0 +1,5 @@
+# .gitignore
+.env
+
+# Generated files
+*.csv
